@@ -1,8 +1,10 @@
 const CreateUser = document.querySelector('.CreateUser')
+
 CreateUser.addEventListener('submit', (e) => {
   e.preventDefault()
   const username = CreateUser.querySelector('.username').value
-  const password = CreateUser.querySelector('.password').value
+    const password = CreateUser.querySelector('.password').value
+    console.log(`creating user with username ${username} and password ${password}`);
   post('/createUser', { username, password })
 })
 

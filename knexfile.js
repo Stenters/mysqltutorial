@@ -5,4 +5,4 @@ module.exports = {
         password: 'nA95l^rVWeIN',
         database: 'tutorial_node_database'
     }
-};
+}

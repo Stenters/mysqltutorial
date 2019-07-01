@@ -7,12 +7,11 @@ const app = express()
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.post('/createUser', (req, res) => {
-  store
-    .createUser({
+  console.log(`creating user ${req.body.username} with password ${req.body.username}`)
+  store.createUser({
       username: req.body.username,
       password: req.body.password
-    })
-    .then(() => res.sendStatus(200))
+    }).then(() => res.sendStatus(200))
 })
 
 app.listen(7555, () => {
